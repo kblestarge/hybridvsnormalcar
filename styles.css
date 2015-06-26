@@ -1,8 +1,14 @@
 .hybrid{
 	background-color: red;
 	text-align: right;
-	margin-right: 40%;
+	width: 40%;
 	padding-right: 10%;
+	display: inline-block;
+}
+
+#h-results{
+	background-color: red;
+	float: right;
 }
 
 .normal{
@@ -10,6 +16,13 @@
 	text-align: left;
 	margin-left: 40%;
 	padding-left: 10%;
+	display: inline-block;
+}
+
+#n-results{
+	clear: both;
+	background-color: yellow;
+	float: left;
 }
 
 .standard{
