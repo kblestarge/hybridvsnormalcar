@@ -15,32 +15,40 @@ var normal = {
 var gasCost;
 var milesDriven;
 
-function fight() {
+$(document).ready(function() {
 
-	fillCar(hybrid);
-	console.log("hybrid:",hybrid);
 
-	fillCar(normal);
-	console.log("normal:",normal);
+	$('button').click(function(){
 
-	gasCost = document.getElementById('gas-cost').value;
-	milesDriven = document.getElementById('num-miles').value;
+		fillCar(hybrid);
+		fillCar(normal);	
 
-	hybridCost = cost(hybrid, gasCost, milesDriven);
-	console.log("hybridCost:",hybridCost);
+		gasCost = document.getElementById('gas-cost').value;
+		milesDriven = document.getElementById('num-miles').value;
 
-	normalCost = cost(normal, gasCost, milesDriven);
-	console.log("normalCost:",normalCost);
+		hybridCost = cost(hybrid, gasCost, milesDriven);
+		normalCost = cost(normal, gasCost, milesDriven);
 
-	hybridGallons = fuelConsumed(hybrid, milesDriven)
-	console.log("hybridGallons:",hybridGallons);
+		hybridGallons = fuelConsumed(hybrid, milesDriven)
+		normalGallons = fuelConsumed(normal, milesDriven)
 
-	normalGallons = fuelConsumed(normal, milesDriven)
-	console.log("normalGallons:",normalGallons);
+		outputResults(hybrid, hybridCost, hybridGallons);
+		outputResults(normal, normalCost, normalGallons);
 
-	outputResults(hybrid, hybridCost, hybridGallons);
-	outputResults(normal, normalCost, normalGallons);
-}
+		$('.popup').animate({
+			height: "toggle",
+			fontSize: "toggle"
+		},500);
+	})
+
+	$('.popup').click(function(){
+
+		$(this).animate({
+			height: "toggle",
+			fontSize: "toggle"
+		},500);
+	})
+})
 
 function fillCar(car) {
 	
@@ -66,8 +74,8 @@ function fuelConsumed(car, miles) {
 
 function outputResults(car, cost, gallons) {
 
-	var gallonElm = document.getElementById(car.type + '-results').getElementsByTagName('p')[1];
-	var costElm = document.getElementById(car.type + '-results').getElementsByTagName('p')[2];
+	var gallonElm = document.getElementById(car.type + '-results').getElementsByTagName('span')[0];
+	var costElm = document.getElementById(car.type + '-results').getElementsByTagName('span')[1];
 
 	gallonElm.innerHTML = gallons;
 	costElm.innerHTML = cost;

@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	
+
 	<h1>Hybrid VS Normal</h1>
 
 	<div class="standard">
@@ -18,37 +18,55 @@
 		<input id="num-miles" type="text">
 	</div>
 
-	<div class="hybrid">
-		<p>Initial cost:</p>
-		<input id="h-initial-cost" type="text">
-		<p>Average miles per gallon:</p>
-		<input id="h-mpg" type="text">
-		<p>Resale value after 5 years:</p>
-		<input id="h-resale" type="text">
-	</div>
-	<div id="h-results">
-		<p>Hybrid Car</p>
-		<p>Gallons of gas</p>
-		<p>5 Year Cost</p>
+	<div class="two">
+		<div class="hybrid">
+			<p>Initial cost:</p>
+			<input id="h-initial-cost" type="text">
+			<p>Average miles per gallon:</p>
+			<input id="h-mpg" type="text">
+			<p>Resale value after 5 years:</p>
+			<input id="h-resale" type="text">
+		</div>
+
+		<div class="vs">
+			VS
+		</div>
+
+		<div class="normal">
+			<p>Initial cost:</p>
+			<input id="n-initial-cost" type="text">
+			<p>Average miles per gallon:</p>
+			<input id="n-mpg" type="text">
+			<p>Resale value after 5 years:</p>
+			<input id="n-resale" type="text">
+		</div>
 	</div>
 
-	<div id="n-results">
-		<p>Normal Car</p>
-		<p>fsdfsdfds</p>
-		<p>rtyrtyr</p>
-	</div>
-	<div class="normal">
-		<p>Initial cost:</p>
-		<input id="n-initial-cost" type="text">
-		<p>Average miles per gallon:</p>
-		<input id="n-mpg" type="text">
-		<p>Resale value after 5 years:</p>
-		<input id="n-resale" type="text">
+	<div class="button">
+		<button>FIGHT</button>
 	</div>
 
-	<button onclick="fight()">FIGHT</button>
+	<div class="popup hide">
+		<div class="blank">
+			<div id="h-results">
+				<h2>Hybrid Car</h2>
+				<p>Gallons of gas:</p>
+				<span></span>
+				<p>5 Year Cost:</p>
+				<span></span>
+			</div>
 
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+			<div id="n-results">
+				<h2>Normal Car</h2>
+				<p>Gallons of gas:</p>
+				<span></span>
+				<p>5 Year Cost:</p>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

@@ -1,28 +1,43 @@
+h1{
+	text-align: center;
+}
+
+body{
+	margin: 0px;
+}
+
+.two{
+	display: inline-block;
+	width: 100%;
+}
+
+.vs{
+	width: 10%;
+	height: 100px;
+	background-color: black;
+	display: inline-block;
+	font-size: 60px;
+	color: white;
+	border-radius: 100%;
+	text-align: center;
+	margin: auto;
+}
+
 .hybrid{
 	background-color: red;
 	text-align: right;
-	width: 40%;
+	width: 30%;
 	padding-right: 10%;
 	display: inline-block;
-}
-
-#h-results{
-	background-color: red;
-	float: right;
 }
 
 .normal{
 	background-color: yellow;
 	text-align: left;
-	margin-left: 40%;
+	margin-left	: 0;
+	width: 30%;
 	padding-left: 10%;
 	display: inline-block;
-}
-
-#n-results{
-	clear: both;
-	background-color: yellow;
-	float: left;
 }
 
 .standard{
@@ -30,4 +45,55 @@
 	margin: 0 auto;
 	width: 20%;
 	padding-left: 100px;
+}
+
+.hide{
+	display: none;
+}
+
+.popup{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+.blank{
+	margin: 0 auto;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+}
+
+#h-results{
+	background-color: red;
+	display: inline-block;
+	margin-top: 20%;
+	width: 200px;
+	height: 200px;
+}
+
+#n-results{
+	background-color: yellow;
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+}
+
+#h-results span{
+	font-size: 40px;
+}
+
+button{
+	margin: 20px;
+	border: none;
+	width: 100px;
+	height: 40px;
+}
+
+.button{
+	margin: 0 auto;
+	text-align: center;
 }
