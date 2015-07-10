@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hybrid VS Normal</title>
+	<title>Car Fighter</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-	<h1>Hybrid VS Normal</h1>
+	<h1>CAR FIGHTER</h1>
 
 	<div class="standard">
-		<p>Choose battle type:</p>
-		Gas<img src="img/gas.png"><input class="radio" type="radio" name="battle">
-		Cost<img src="img/money.png"><input class="radio" type="radio" name="battle">
-		<p>Estimated price per gallon of gas for 5 years:</p>
-		<input id="gas-cost" type="text">
-		<p>Estimated miles driven per year:</p>
-		<input id="num-miles" type="text">
+		<div class="battle">
+			<p>Choose battle type:</p>
+			<img src="img/gas2.png">
+			<input class="radio" type="radio" name="battle" value="gas">
+			<img src="img/money.png">
+			<input class="radio" type="radio" name="battle" value="cost">
+		</div>
+		<div>
+			<p>Estimated price per gallon<br>of gas for 5 years:</p>
+			<input id="gas-cost" type="text">
+		</div>
+		<div>
+			<p>Estimated miles<br>driven per year:</p>
+			<input id="num-miles" type="text">
+		</div>
 	</div>
 
 	<div class="section">
 		<div class="hybrid">
-			<input id="h-initial-cost" type="text" placeholder="Initial Cost">
-			<input id="h-mpg" type="text" placeholder="Avg MPG">
-			<input id="h-resale" type="text" placeholder="resale val in 5 yr.">
-			<p class="car">Hybrid</p>
+			<p id="h-car" class="car">Hybrid</p>
+			<p class="stats">stats:</p>
+			<div>
+				<input id="h-initial-cost" type="text" placeholder="Initial Cost">
+				<input id="h-mpg" type="text" placeholder="MPG">
+				<input id="h-resale" type="text" placeholder="Resale val in 5 yr.">
+			</div>
 		</div>
 
 		<div class="vs">
@@ -31,16 +43,35 @@
 		</div>
 
 		<div class="normal">
-			<p class="car">Normal</p>
-			<input id="n-initial-cost" type="text" placeholder="Initial Cost">
-			<input id="n-mpg" type="text" placeholder="Avg MPG">
-			<input id="n-resale" type="text" placeholder="resale val in 5 yr.">
+			<p id="n-car" class="car">Normal</p>
+			<p class="stats2">stats:</p>
+			<div>
+				<input id="n-initial-cost" type="text" placeholder="Initial Cost">
+				<input id="n-mpg" type="text" placeholder="MPG">
+				<input id="n-resale" type="text" placeholder="Resale val in 5 yr.">
+			</div>
 		</div>
 	</div>
 
 	<div class="button">
 		<button>FIGHT</button>
 	</div>
+
+	<!-- car fight !-->
+
+	<div class="red-car">
+		<img src="img/carRed.png">
+	</div>
+
+	<div class="yellow-car">
+		<img src="img/carYellow.png">
+	</div>
+
+	<div class="explosion hide">
+		<img src="img/explosion.png">
+	</div>
+
+	<!-- Popup !-->
 
 	<div class="popup hide">
 		<div class="blank">

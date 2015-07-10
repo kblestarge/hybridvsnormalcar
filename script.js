@@ -20,25 +20,52 @@ $(document).ready(function() {
 
 	$('button').click(function(){
 
-		fillCar(hybrid);
-		fillCar(normal);	
+		// normal.initialCost = document.getElementById(normal.type + '-initial-cost').value;
+		// normal.mpg = document.getElementById(normal.type + '-mpg').value;
+		// normal.resale = document.getElementById(normal.type + '-resale').value;
 
-		gasCost = document.getElementById('gas-cost').value;
-		milesDriven = document.getElementById('num-miles').value;
+		// hybrid.initialCost = document.getElementById(hybrid.type + '-initial-cost').value;
+		// hybrid.mpg = document.getElementById(hybrid.type + '-mpg').value;
+		// hybrid.resale = document.getElementById(hybrid.type + '-resale').value;
 
-		hybridCost = cost(hybrid, gasCost, milesDriven);
-		normalCost = cost(normal, gasCost, milesDriven);
+		// gasCost = document.getElementById('gas-cost').value;
+		// milesDriven = document.getElementById('num-miles').value;
 
-		hybridGallons = fuelConsumed(hybrid, milesDriven)
-		normalGallons = fuelConsumed(normal, milesDriven)
+		// if(gasCost == '' || milesDriven == '' || normal.initialCost == '' || normal.mpg == '' || normal.resale == '' || hybrid.initialCost == '' || hybrid.mpg == '' || hybrid.resale== '') { //check inputs
+		// 	alert('Don\'t hold back, my friend. Fill up the stats!');
+		// }else { //go
 
-		outputResults(hybrid, hybridCost, hybridGallons);
-		outputResults(normal, normalCost, normalGallons);
+			fillCar(hybrid);
+			fillCar(normal);	
 
-		$('.popup').animate({
-			height: "toggle",
-			fontSize: "toggle"
-		},500);
+			hybridCost = cost(hybrid, gasCost, milesDriven);
+			normalCost = cost(normal, gasCost, milesDriven);
+
+			hybridGallons = fuelConsumed(hybrid, milesDriven)
+			normalGallons = fuelConsumed(normal, milesDriven)
+
+			outputResults(hybrid, hybridCost, hybridGallons);
+			outputResults(normal, normalCost, normalGallons);
+
+			$('.red-car').animate({
+				marginLeft: "35%"
+			},500);
+
+			$('.yellow-car').animate({
+				marginRight: "35%"
+			},500);
+
+			$('.explosion').delay(100).fadeIn( "medium" );
+
+			//calculate winner, prob an if
+			$('#h-results').css('background-color', '#C98910');
+			$('#n-results').css('background-color', '#A8A8A8');
+
+			$('.popup').delay(700).animate({
+				height: "toggle",
+				fontSize: "toggle"
+			},500);
+		// }
 	})
 
 	$('.popup').click(function(){
@@ -47,6 +74,16 @@ $(document).ready(function() {
 			height: "toggle",
 			fontSize: "toggle"
 		},500);
+
+		$('.red-car').animate({
+			marginLeft: "0px"
+		},500);
+
+		$('.yellow-car').animate({
+			marginRight: "0px"
+		},500);
+
+		$('.explosion').fadeOut( "medium" );
 	})
 })
 
