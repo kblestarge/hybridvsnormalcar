@@ -6,56 +6,89 @@ body{
 	margin: 0px;
 }
 
+input{
+	font-size: 20px;
+	width: 150px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.radio{
+	width: 50px;
+}
+
+.standard p{
+	display: inline-block;
+}
+
+.standard img{
+	width: 30px;
+	height: 30px;
+}
+
+.car{
+	margin-top: 0px;
+	font-size: 50px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	display: inline-block;
+}
+
 .section{
 	display: inline-block;
 	width: 100%;
+	position: relative;
 }
 
 .vs{
-	position: absolute;
-	width: 150px;
-	height: 100px;
-	background-color: black;
-	display: inline-block;
-	font-size: 60px;
-	color: white;
-	border-radius: 100%;
-	text-align: center;
-	padding-top: 25px;
-	margin-left: -75px;
-	margin-top: 40px;
+  position: absolute;
+  display: inline-block;
+  font-size: 60px;
+  color: white;
+  border-radius: 100%;
+  padding-top: 30px;
+  margin-left: -100px;
+  z-index: 10;
 }
 
 .hybrid{
 	background-color: red;
 	text-align: right;
 	width: 40%;
+	height: 100px;
 	padding-right: 10%;
+	padding-top: 30px;
 	display: inline-block;
+	margin-left: 40px;
 	margin-right: 0px;
-	border-top-right-radius: 200px;
-	border-bottom-right-radius: 50px;
+	border-top-right-radius: 2000000px;
+	border-bottom-left-radius: 2000000px;
+	position: relative;
+	z-index: 9;
 }
 
 .normal{
-	border-top-left-radius: 200px;
-	border-bottom-left-radius: 50px;
-	background-image: url('img/car.png');
-	background-size: 100%;
-	height: 500px;
+	border-bottom-left-radius: 2000000px;
+	border-top-right-radius: 2000000px;
+	background-color: yellow;
 	text-align: left;
-	margin-left	: -4px;
-	width: 40%;
+	margin-left	: -50px;
+	height: 100px;
+	width: 38%;
 	padding-left: 10%;
+	padding-top: 30px;
+	position: relative;
 	display: inline-block;
 }
 
 .standard{
-	border-radius: 50px;
+	font-size: 20px;
+	font-weight: 600;
+	border-radius: 5px;
 	background-color: green;
 	margin: 0 auto;
-	width: 20%;
+	width: 91%;
 	padding-left: 100px;
+	margin-bottom: 20px;
 }
 
 .hide{
@@ -69,6 +102,7 @@ body{
 	top: 0;
 	left: 0;
 	text-align: center;
+	z-index: 20;
 }
 
 .blank{
