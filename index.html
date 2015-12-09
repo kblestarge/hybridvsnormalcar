@@ -9,99 +9,101 @@
 
 	<h1>CAR FIGHTER</h1>
 
-	<div class="standard">
-		<div class="battle">
-			<p>Choose battle type:</p>
-			<img src="img/gas2.png">
-			<input class="radio" type="radio" name="battle" value="gas">
-			<img src="img/money.png">
-			<input class="radio" type="radio" name="battle" value="cost">
-		</div>
-		<div>
-			<p>Estimated price per gallon<br>of gas for 5 years:</p>
-			<input id="gas-cost" type="text">
-		</div>
-		<div>
-			<p>Estimated miles<br>driven per year:</p>
-			<input id="num-miles" type="text">
-		</div>
-	</div>
-
-	<div class="section">
-		<div class="hybrid">
-			<p id="h-car" class="car">Hybrid</p>
-			<p class="stats">stats:</p>
+	<form>
+		<div class="standard">
+			<div class="battle">
+				<p>Choose battle type:</p>
+				<img src="img/gas2.png">
+				<input class="radio" type="radio" required name="battle" value="gas">
+				<img src="img/money.png">
+				<input class="radio" type="radio" required name="battle" value="cost">
+			</div>
 			<div>
-				<input id="h-initial-cost" type="text" placeholder="Initial Cost">
-				<input id="h-mpg" type="text" placeholder="MPG">
-				<input id="h-resale" type="text" placeholder="Resale val in 5 yr.">
+				<p>Estimated price per gallon<br>of gas for 5 years:</p>
+				<input id="gas-cost" required type="number" step=".01" min="0">
 			</div>
-		</div>
-
-		<div class="vs">
-			<img src="img/vs.png">
-		</div>
-
-		<div class="normal">
-			<p id="n-car" class="car">Normal</p>
-			<p class="stats2">stats:</p>
 			<div>
-				<input id="n-initial-cost" type="text" placeholder="Initial Cost">
-				<input id="n-mpg" type="text" placeholder="MPG">
-				<input id="n-resale" type="text" placeholder="Resale val in 5 yr.">
+				<p>Estimated miles<br>driven per year:</p>
+				<input id="num-miles" required type="number" min="0">
 			</div>
 		</div>
-	</div>
 
-	<div class="button">
-		<button>FIGHT</button>
-	</div>
-
-	<!-- car fight !-->
-
-	<div class="red-car">
-		<img src="img/carRed.png">
-	</div>
-
-	<div class="yellow-car">
-		<img src="img/carYellow.png">
-	</div>
-
-	<div class="explosion hide">
-		<img src="img/explosion.png">
-	</div>
-
-	<!-- Popup !-->
-
-	<div class="popup hide">
-		<div class="blank">
-			<div class="h-car-fin">
-				<img src="img/carRedBroken.png">
+		<div class="section">
+			<div class="hybrid">
+				<p id="h-car" class="car">Hybrid</p>
+				<p class="stats">stats:</p>
+				<div>
+					<input id="h-initial-cost" required type="number" min="0" placeholder="Initial Cost">
+					<input id="h-mpg" type="number" required min="0" placeholder="MPG">
+					<input id="h-resale" type="number" required min="0" placeholder="Resale val in 5 yr.">
+				</div>
 			</div>
 
-			<div id="h-results">
-				<h2>Hybrid Car</h2>
-				<p>Gallons of gas:</p>
-				<span></span>
-				<p>5 Year Cost:</p>
-				<span></span>
-				<img src="">
+			<div class="vs">
+				<img src="img/vs.png">
 			</div>
 
-			<div id="n-results">
-				<h2>Normal Car</h2>
-				<p>Gallons of gas:</p>
-				<span></span>
-				<p>5 Year Cost:</p>
-				<span></span>
-				<img src="">
-			</div>
-
-			<div class="n-car-fin">
-				<img src="img/carYellowBroken.png">
+			<div class="normal">
+				<p id="n-car" class="car">Normal</p>
+				<p class="stats2">stats:</p>
+				<div>
+					<input id="n-initial-cost" required min="0" type="number" placeholder="Initial Cost">
+					<input id="n-mpg" type="number" min="0" required placeholder="MPG">
+					<input id="n-resale" type="number" min="0" required placeholder="Resale val in 5 yr.">
+				</div>
 			</div>
 		</div>
-	</div>
+
+		<div class="button">
+			<button type="submit" id="fight">FIGHT</button>
+		</div>
+
+		<!-- car fight !-->
+
+		<div class="red-car">
+			<img src="img/carRed.png">
+		</div>
+
+		<div class="yellow-car">
+			<img src="img/carYellow.png">
+		</div>
+
+		<div class="explosion hide">
+			<img src="img/explosion.png">
+		</div>
+
+		<!-- Popup !-->
+
+		<div class="popup hide">
+			<div class="blank">
+				<div class="h-car-fin">
+					<img src="img/carRedBroken.png">
+				</div>
+
+				<div id="h-results">
+					<h2>Hybrid Car</h2>
+					<p>Gallons of gas:</p>
+					<span></span>
+					<p>5 Year Cost:</p>
+					<span></span>
+					<img src="">
+				</div>
+
+				<div id="n-results">
+					<h2>Normal Car</h2>
+					<p>Gallons of gas:</p>
+					<span></span>
+					<p>5 Year Cost:</p>
+					<span></span>
+					<img src="">
+				</div>
+
+				<div class="n-car-fin">
+					<img src="img/carYellowBroken.png">
+				</div>
+			</div>
+		</div>
+	</form>
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>	
 	<script type="text/javascript" src="script.js"></script>

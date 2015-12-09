@@ -19,8 +19,7 @@ p{
 }
 
 .standard div{
-	display: inline-block;
-}
+flex: 1;}
 
 .standard p{
 	display: block;
@@ -32,8 +31,10 @@ p{
 }
 
 .standard div p{
-	margin-top: 10px;
-	margin-right: 10px;
+	/* margin-top: 10px; */
+	/* margin-right: 10px; */
+	margin: 10px 10px 0 0;
+	float: left;
 }
 
 #gas-cost, #num-miles{
@@ -48,7 +49,10 @@ p{
 	font-size: 20px;
 	width: 150px;
 	height: 30px;
+	margin: 5px 0;
 	border-radius: 5px;
+	float: left;
+	clear: both;
 }
 
 #h-resale, #n-resale{
@@ -137,7 +141,7 @@ p{
 	width: 42%;
 	height: 100px;
 	padding-right: 8%;
-	padding-top: 30px;
+	padding-top: 13px;
 	display: inline-block;
 	margin-left: 40px;
 	margin-right: 0px;
@@ -161,6 +165,10 @@ p{
 	display: inline-block;
 }
 
+.battle div{
+    clear: both;
+}
+
 .standard{
 	border-top-left-radius: 2000000px;
 	border-bottom-right-radius: 2000000px;
@@ -176,7 +184,9 @@ p{
 	margin: 0 auto;
 	width: 89%;
 	padding-left: 100px;
+	padding-bottom: 20px;
 	margin-bottom: 20px;
+	display: flex;
 }
 
 .hide{
@@ -284,3 +294,5 @@ button:hover{
 	max-height: 100px;
 	width: auto;
 }
+
+.stat-cont{}
